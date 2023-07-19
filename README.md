@@ -13,6 +13,11 @@
 启动类位于 alpha 模块下，注意配置文件 application.yaml 中的数据库配置，改成你能连接的数据库。
 创建一个空白 MySQL Schema，flyway 将自动创建表和插入初始化数据。默认数据库版本为 MySQL 8. 
 
+#### 系统默认账户密码
+
+账户: admin  
+密码：qz  
+
 -----------
 
 ### 创建一个基于轻舟的 Spring Boot 工程

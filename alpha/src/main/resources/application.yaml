@@ -8,7 +8,7 @@ spring:
   lifecycle:
     timeout-per-shutdown-phase: 5s
   flyway:
-    enabled: false
+    enabled: true
     clean-disabled: true
     baseline-on-migrate: true
     baseline-version: 1.0.0
@@ -52,7 +52,7 @@ qz:
       - /h2-console/**
       - /qz-ui/**
   we-chat:
-    app-id: wx025493bee8ad6ad2
-    app-secret: 27cdbb764f59d7c9f0fe5abae7d2f521
+    app-id: xxx
+    app-secret: xxx
     code2session-url: https://api.weixin.qq.com/sns/jscode2session
     login-url: we-chat/login/account

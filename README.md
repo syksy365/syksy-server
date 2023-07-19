@@ -9,8 +9,10 @@
 轻舟采用前后端代码分离架构。前端使用 React + Ant Design pro v5，后端使用 Spring Boot + Spring Security + Mybatis-Plus，其中会话状态使用 Server Side Session 方案，即 Cookie + Session。
 
 ### 源码启动
-启动类位于 alpha 模块下，注意配置文件 application.yaml 中的数据库配置，改成你本地能连接的数据库。  
-数据库初始化脚本位于 alpha 模块下的 resources 中。
+
+启动类位于 alpha 模块下，注意配置文件 application.yaml 中的数据库配置，改成你能连接的数据库。
+创建一个空白 MySQL Schema，flyway 将自动创建表和插入初始化数据。默认数据库版本为 MySQL 8. 
+
 -----------
 
 ### 创建一个基于轻舟的 Spring Boot 工程

@@ -2,6 +2,7 @@ package site.syksy.qingzhou.security.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.security.access.AccessDecisionManager;
 import org.springframework.security.access.AccessDecisionVoter;
 import org.springframework.security.access.method.MapBasedMethodSecurityMetadataSource;
@@ -20,7 +21,7 @@ import java.util.List;
  * 方法权限配置
  */
 @Configuration
-//@DependsOn({"flyway", "flywayInitializer"})
+@DependsOn({"flyway", "flywayInitializer"})
 @EnableGlobalMethodSecurity
 public class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
 

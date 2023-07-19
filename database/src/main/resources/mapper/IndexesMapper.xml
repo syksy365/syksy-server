@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="site.syksy.qingzhou.database.mapper.IndexesMapper">
+
+    <resultMap id="indexesDO" type="site.syksy.qingzhou.database.domain.IndexesDO"></resultMap>
+
+    <select id="selectIndexes" databaseId="h2" resultMap="indexesDO">
+        select COLUMN_NAME,PRIMARY_KEY from INFORMATION_SCHEMA.INDEXES WHERE TABLE_NAME = #{tableName}
+    </select>
+
+</mapper>

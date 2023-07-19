@@ -1,0 +1,13 @@
+**/.idea
+**/target/
+*.iml
+
+qingzhou-boot-log
+qingzhou-boot-z-log
+
+private_key.der
+
+tus-upload-directory
+app-upload-directory
+
+

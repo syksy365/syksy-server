@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="site.syksy.qingzhou.upms.mapper.RouteMapper">
+
+    <select id="selectRouteByUserId" resultType="site.syksy.qingzhou.upms.domain.RouteDO">
+        select sur.* from s_upms_route sur
+        left join s_upms_route_link surl on sur.id = surl.route_id
+        left join s_upms_user_role suur on surl.target_id = suur.role_id
+        where surl.target_type = 'role' and suur.user_id=#{userId}
+        UNION
+        SELECT
+        sur.*
+        FROM
+        s_upms_route sur
+        LEFT JOIN
+        s_upms_route_link surl ON surl.route_id = sur.id
+
+        LEFT JOIN
+        s_upms_role_menu surm ON surm.menu_id = surl.target_id
+
+        LEFT JOIN
+        s_upms_user_role suur ON suur.role_id = surm.role_id
+
+        WHERE
+        surl.target_type = 'menu'
+        AND suur.user_id = #{userId}
+    </select>
+</mapper>

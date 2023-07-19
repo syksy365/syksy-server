@@ -1,0 +1,58 @@
+server:
+  port: 8849
+  shutdown: graceful
+
+spring:
+  main:
+    lazy-initialization: true
+  lifecycle:
+    timeout-per-shutdown-phase: 5s
+  flyway:
+    enabled: false
+    clean-disabled: true
+    baseline-on-migrate: true
+    baseline-version: 1.0.0
+    placeholder-prefix: '#{'
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  datasource:
+    url: jdbc:mysql://localhost:3306/syksy?characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    site.syksy.qingzhou: DEBUG
+
+qz:
+  file-directory:
+    tus-upload-directory: tus-upload-directory
+    app-upload-directory: app-upload-directory
+  security:
+    api-init: false
+    path-prefix: /qz/api
+    login-url: login/account
+    logout-url: login/out-login
+    maximum-sessions: -1
+    max-sessions-prevents-login: false
+    captcha:
+      enable: false
+    web-ignoring:
+      - /
+      - /swagger-ui.html
+      - /v3/**
+      - /swagger-ui/**
+      - /h2-console/**
+      - /qz-ui/**
+  we-chat:
+    app-id: wx025493bee8ad6ad2
+    app-secret: 27cdbb764f59d7c9f0fe5abae7d2f521
+    code2session-url: https://api.weixin.qq.com/sns/jscode2session
+    login-url: we-chat/login/account

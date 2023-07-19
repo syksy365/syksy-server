@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="site.syksy.qingzhou.database.mapper.ColumnsMapper">
+
+    <resultMap id="columnsDO" type="site.syksy.qingzhou.database.domain.ColumnsDO"></resultMap>
+
+    <select id="selectColumns" databaseId="h2" resultMap="columnsDO">
+        SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME= #{tableName}
+    </select>
+
+    <select id="selectColumns" databaseId="mysql" resultMap="columnsDO">
+        SELECT table_name,column_comment as remarks,column_name,data_type as
+        type_name,column_key,is_nullable,character_maximum_length
+        FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME= #{tableName}
+        AND TABLE_SCHEMA = SCHEMA()
+        order by ordinal_position asc
+    </select>
+
+</mapper>

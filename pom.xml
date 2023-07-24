@@ -29,6 +29,7 @@
         <module>ui</module>
         <module>file</module>
         <module>global-file</module>
+        <module>workflow</module>
     </modules>
 
     <properties>
@@ -45,6 +46,7 @@
         <kaptcha.version>2.3.2</kaptcha.version>
         <transmittable-thread-local.version>2.13.2</transmittable-thread-local.version>
         <thumbnailator.version>0.4.19</thumbnailator.version>
+        <flowable.version>6.8.0</flowable.version>
     </properties>
 
     <dependencyManagement>
@@ -165,6 +167,12 @@
                 <groupId>net.coobird</groupId>
                 <artifactId>thumbnailator</artifactId>
                 <version>${thumbnailator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-engine</artifactId>
+                <version>${flowable.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

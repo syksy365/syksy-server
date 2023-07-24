@@ -43,7 +43,7 @@ qz:
     maximum-sessions: -1
     max-sessions-prevents-login: false
     captcha:
-      enable: false
+      enable: true
     web-ignoring:
       - /
       - /swagger-ui.html

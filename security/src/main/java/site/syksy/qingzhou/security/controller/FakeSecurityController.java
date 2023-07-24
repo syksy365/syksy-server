@@ -19,9 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -55,23 +53,21 @@ public class FakeSecurityController {
         LocalDateTime localDateTime = LocalDateTime.now();
 
         HttpSession httpSession = request.getSession();
-        httpSession.setAttribute(GeneralConstant.CAPTCHA,capText);
-        httpSession.setAttribute(GeneralConstant.CAPTCHA_CREATE_TIME,localDateTime);
+        httpSession.setAttribute(GeneralConstant.CAPTCHA, capText);
+        httpSession.setAttribute(GeneralConstant.CAPTCHA_CREATE_TIME, localDateTime);
 
         BufferedImage bi = captchaProducer.createImage(capText);
-        String name = localDateTime.toEpochSecond(ZoneOffset.UTC) + ".png";
-        response.setHeader(HttpHeaders.CONTENT_DISPOSITION,
-                ContentDisposition.attachment().filename(name, StandardCharsets.UTF_8).build().toString());
+        response.setHeader(HttpHeaders.CONTENT_DISPOSITION, ContentDisposition.inline().toString());
         response.setContentType(MediaType.IMAGE_PNG_VALUE);
         ImageIO.write(bi, "png", response.getOutputStream());
     }
 
-    @Operation(summary = "登录验证码开启状态查询")
+    @Operation(summary = "登录验证码开启状态和有效时长查询")
     @GetMapping("captcha/status")
-    public Map<String, Object> captcha() {
+    public Map<String, Object> captchaStatus() {
         HashMap<String, Object> map = new HashMap<>(2);
         map.put("enable", captchaProperties.getEnable());
-        map.put("effectiveTime", captchaProperties.getEffectiveTime());
+        map.put("effectiveTime", captchaProperties.getEffectiveTime().getSeconds());
         return map;
     }
 }

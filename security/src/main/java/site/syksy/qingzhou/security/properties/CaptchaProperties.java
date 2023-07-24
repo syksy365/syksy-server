@@ -17,12 +17,12 @@ public class CaptchaProperties {
     private Boolean enable = true;
 
     /**
-     * 有效时长
+     * 有效时长，ISO-8601持续时间格式，默认是30秒，即PT30S
      */
     private Duration effectiveTime = Duration.ofSeconds(30);
 
     /**
-     * 字符集
+     * 验证码字符集，默认为：0123456789
      */
     private String character = "0123456789";
 

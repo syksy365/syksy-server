@@ -8,6 +8,10 @@
 ### 软件架构
 轻舟采用前后端代码分离架构。前端使用 React + Ant Design pro v5，后端使用 Spring Boot + Spring Security + Mybatis-Plus，其中会话状态使用 Server Side Session 方案，即 Cookie + Session。
 
+### 依赖
+- JDK 8+ (实测 8、11、17 都可以运行)
+- MySQL 8+
+
 ### 源码启动
 
 启动类位于 alpha 模块下，注意配置文件 application.yaml 中的数据库配置，改成你能连接的数据库。

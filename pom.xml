@@ -29,6 +29,8 @@
         <module>ui</module>
         <module>file</module>
         <module>global-file</module>
+        <module>log</module>
+        <module>flowable</module>
     </modules>
 
     <properties>
@@ -56,6 +58,11 @@
             </dependency>
             <dependency>
                 <groupId>site.syksy.qingzhou</groupId>
+                <artifactId>flowable</artifactId>
+                <version>${qingzhou.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>site.syksy.qingzhou</groupId>
                 <artifactId>generator</artifactId>
                 <version>${qingzhou.version}</version>
             </dependency>
@@ -77,6 +84,11 @@
             <dependency>
                 <groupId>site.syksy.qingzhou</groupId>
                 <artifactId>global-file</artifactId>
+                <version>${qingzhou.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>site.syksy.qingzhou</groupId>
+                <artifactId>log</artifactId>
                 <version>${qingzhou.version}</version>
             </dependency>
             <dependency>

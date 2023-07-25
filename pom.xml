@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.2</version>
+        <version>2.7.14</version>
         <relativePath/>
     </parent>
 
@@ -37,16 +37,16 @@
         <qingzhou.version>1.0.0</qingzhou.version>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mybatis-plus.version>3.5.2</mybatis-plus.version>
-        <pagehelper.version>1.4.1</pagehelper.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <pagehelper.version>1.4.7</pagehelper.version>
         <freemarker.version>2.3.30</freemarker.version>
-        <springdoc.version>1.6.11</springdoc.version>
+        <springdoc.version>1.7.0</springdoc.version>
         <jasypt.version>3.0.3</jasypt.version>
-        <commons-text.version>1.9</commons-text.version>
+        <commons-text.version>1.10.0</commons-text.version>
         <flyway-core.version>7.15.0</flyway-core.version>
         <kaptcha.version>2.3.2</kaptcha.version>
-        <transmittable-thread-local.version>2.13.2</transmittable-thread-local.version>
-        <thumbnailator.version>0.4.19</thumbnailator.version>
+        <transmittable-thread-local.version>2.14.3</transmittable-thread-local.version>
+        <thumbnailator.version>0.4.20</thumbnailator.version>
     </properties>
 
     <dependencyManagement>

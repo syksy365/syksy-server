@@ -8,8 +8,8 @@ import org.springframework.context.annotation.PropertySource;
  * @author ifreeky
  */
 @Configuration
-@ConfigurationProperties(prefix = "h2")
-@PropertySource(value = {"classpath:application-h2.properties"})
+@PropertySource(value = {"classpath:h2.properties"})
+@ConfigurationProperties(prefix = "db.h2")
 public class H2Properties {
 
     private String url;

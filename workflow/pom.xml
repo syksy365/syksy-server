@@ -10,13 +10,18 @@
     </parent>
 
     <artifactId>workflow</artifactId>
-    <name>流程引擎</name>
+    <name>[flow]流程引擎</name>
 
     <dependencies>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
 
         <dependency>

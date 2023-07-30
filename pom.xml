@@ -30,7 +30,7 @@
         <module>file</module>
         <module>global-file</module>
         <module>log</module>
-        <module>flowable</module>
+        <module>workflow</module>
     </modules>
 
     <properties>
@@ -47,6 +47,7 @@
         <kaptcha.version>2.3.2</kaptcha.version>
         <transmittable-thread-local.version>2.14.3</transmittable-thread-local.version>
         <thumbnailator.version>0.4.20</thumbnailator.version>
+        <camunda.spring-boot.version>7.19.0</camunda.spring-boot.version>
     </properties>
 
     <dependencyManagement>
@@ -54,11 +55,6 @@
             <dependency>
                 <groupId>site.syksy.qingzhou</groupId>
                 <artifactId>qingzhou-boot-starter</artifactId>
-                <version>${qingzhou.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
-                <artifactId>flowable</artifactId>
                 <version>${qingzhou.version}</version>
             </dependency>
             <dependency>
@@ -115,6 +111,12 @@
             <dependency>
                 <groupId>site.syksy.qingzhou</groupId>
                 <artifactId>ui</artifactId>
+                <version>${qingzhou.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>site.syksy.qingzhou</groupId>
+                <artifactId>workflow</artifactId>
                 <version>${qingzhou.version}</version>
             </dependency>
 
@@ -178,6 +180,13 @@
                 <artifactId>thumbnailator</artifactId>
                 <version>${thumbnailator.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.camunda.bpm.springboot</groupId>
+                <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
+                <version>${camunda.spring-boot.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

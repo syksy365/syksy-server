@@ -51,6 +51,7 @@ qz:
       - /swagger-ui/**
       - /h2-console/**
       - /qz-ui/**
+      - /qz/api/captcha/**
   we-chat:
     app-id: xxx
     app-secret: xxx

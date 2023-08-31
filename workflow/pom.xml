@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>site.syksy.qingzhou</groupId>
-        <artifactId>qingzhou-boot</artifactId>
+        <groupId>site.syksy.rose</groupId>
+        <artifactId>rose-boot</artifactId>
         <version>1.0.0</version>
     </parent>
 

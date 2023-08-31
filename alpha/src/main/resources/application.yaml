@@ -29,7 +29,7 @@ mybatis-plus:
 
 logging:
   level:
-    site.syksy.qingzhou: DEBUG
+    site.syksy.rose: DEBUG
 
 qz:
   file-directory:
@@ -50,7 +50,7 @@ qz:
       - /v3/**
       - /swagger-ui/**
       - /h2-console/**
-      - /qz-ui/**
+      - /rose-ui/**
       - /qz/api/captcha/**
   we-chat:
     app-id: xxx

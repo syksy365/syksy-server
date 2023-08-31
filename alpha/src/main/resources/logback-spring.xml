@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <contextName>qingzhou-boot</contextName>
-    <springProperty scope="context" name="logPath" source="logging.path" defaultValue="${user.home}/logs/qingzhou"/>
+    <contextName>rose-boot</contextName>
+    <springProperty scope="context" name="logPath" source="logging.path" defaultValue="${user.home}/logs/rose"/>
     <include resource="org/spingframework/boot/logging/logback/base.xml"/>
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">

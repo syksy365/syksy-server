@@ -11,8 +11,8 @@
         <relativePath/>
     </parent>
 
-    <groupId>site.syksy.qingzhou</groupId>
-    <artifactId>qingzhou-boot</artifactId>
+    <groupId>site.syksy.rose</groupId>
+    <artifactId>rose-boot</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
@@ -23,7 +23,7 @@
         <module>database</module>
         <module>generator</module>
         <module>security</module>
-        <module>qingzhou-boot-starter</module>
+        <module>rose-boot-starter</module>
         <module>upms</module>
         <module>web</module>
         <module>ui</module>
@@ -34,7 +34,9 @@
     </modules>
 
     <properties>
-        <qingzhou.version>1.0.0</qingzhou.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <rose.version>1.0.0</rose.version>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
@@ -53,71 +55,71 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
-                <artifactId>qingzhou-boot-starter</artifactId>
-                <version>${qingzhou.version}</version>
+                <groupId>site.syksy.rose</groupId>
+                <artifactId>rose-boot-starter</artifactId>
+                <version>${rose.version}</version>
             </dependency>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>generator</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>common</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>database</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>file</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>global-file</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>log</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>upms</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>security</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>setting</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>web</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>ui</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>site.syksy.qingzhou</groupId>
+                <groupId>site.syksy.rose</groupId>
                 <artifactId>workflow</artifactId>
-                <version>${qingzhou.version}</version>
+                <version>${rose.version}</version>
             </dependency>
 
             <dependency>

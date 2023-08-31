@@ -4,10 +4,10 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-import site.syksy.qingzhou.web.exception.NotFoundException;
-import site.syksy.qingzhou.web.page.MyPage;
-import site.syksy.qingzhou.web.page.Pageable;
-import site.syksy.qingzhou.web.page.PageableAsQueryParam;
+import exception.site.syksy.rose.web.NotFoundException;
+import page.site.syksy.rose.web.MyPage;
+import page.site.syksy.rose.web.Pageable;
+import page.site.syksy.rose.web.PageableAsQueryParam;
 
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;

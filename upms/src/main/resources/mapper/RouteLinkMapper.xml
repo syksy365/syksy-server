@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="site.syksy.qingzhou.upms.mapper.RouteLinkMapper">
+<mapper namespace="site.syksy.rose.upms.mapper.RouteLinkMapper">
 
-    <select id="selectByUserId" resultType="site.syksy.qingzhou.upms.domain.RouteLinkDO">
+    <select id="selectByUserId" resultType="site.syksy.rose.upms.domain.RouteLinkDO">
         select * from s_upms_route where id in(
         select route_id from s_upms_route_link where
         (target_id in(select id from s_upms_user_role where user_id = #{userId}) and target_type="role")

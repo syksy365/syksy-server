@@ -3,7 +3,7 @@ package ${packagePath}.domain;
 <#list table.importPackages as pkg>
 import ${pkg};
 </#list>
-import site.syksy.qingzhou.database.domain.BaseEntity;
+import domain.site.syksy.rose.database.BaseEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
